@@ -1,7 +1,7 @@
 name: vertical_images
 description: "A widget for vertical images."
 version: 0.0.1
-homepage:
+homepage: https://github.com/amitedugaon/vertical_image_frist_package.git
 
 environment:
   sdk: '>=3.2.6 <4.0.0'
