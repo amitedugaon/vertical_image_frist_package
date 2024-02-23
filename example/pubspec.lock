@@ -17,13 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  boxing_images:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   cached_network_image:
     dependency: transitive
     description:
@@ -391,6 +384,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  vertical_images:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   web:
     dependency: transitive
     description:

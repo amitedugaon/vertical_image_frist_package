@@ -1,5 +1,5 @@
-import 'package:boxing_images/boxing_images.dart';
 import 'package:flutter/material.dart';
+import 'package:vertical_images/vertical_images.dart';
 
 void main() {
   runApp(const MyApp());

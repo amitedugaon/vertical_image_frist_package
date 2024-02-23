@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  boxing_images:
+  vertical_images:
     path: ..
 
 

@@ -12,11 +12,11 @@ Inspired by [react-compare-slider](https://www.npmjs.com/package/react-compare-s
 
 **❗ In order to start using Image Compare you must have the [Dart SDK][dart_install_link] installed on your machine.**
 
-Add `image_compare_slider` to your `pubspec.yaml`:
+Add `package:vertical_images` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  image_compare_slider:
+  vertical_images:
 ```
 
 Install it:
@@ -28,7 +28,7 @@ dart pub get
 Import it:
 
 ```dart
-import 'package:image_compare_slider/image_compare_slider.dart';
+import 'package:vertical_images/vertical_images.dart';
 ```
 
 Use it:
@@ -115,17 +115,9 @@ Customizing the handle and divider is also possible:
 
 ```dart
 // ...
-ImageCompareSlider(
-  itemOne: const Image.asset('...'),
-  itemTwo: const Image.asset('...'),
-  handleSize: Size(0.05, 0.05),
-  handleRadius: const BorderRadius.all(Radius.circular(50)),
-  fillHandle: true,
-  dividerColor: Colors.black,
-  dividerWidth: 10,
-  handlePosition: 0.8,
-  // ...
-)
+home: Scaffold(
+body: BoxingImages(height: 100, width: 100,),
+),
 // ...
 ```
 
@@ -137,15 +129,32 @@ If you are having problems because height/width is not the same for both images,
 
 ```dart
 // ...
-ImageCompareSlider(
-  itemOne: const Image.asset('...'),
-  itemTwo: const Image.asset('...'),
-  itemOneBuilder: (child, context) => IntrinsicHeight(child: child),
-  itemTwoBuilder: (child, context) => IntrinsicHeight(child: child),
-  // or
-  itemOneBuilder: (child, context) => IntrinsicWidth(child: child),
-  itemTwoBuilder: (child, context) => IntrinsicWidth(child: child),
-)
+import 'package:flutter/material.dart';
+import 'package:vertical_images/vertical_images.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: BoxingImages(height: 100, width: 100,),
+      ),
+    );
+  }
+}
+
 ```
 
 ## TODO 📝
